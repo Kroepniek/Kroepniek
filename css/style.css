@@ -334,13 +334,68 @@ tr:nth-child(even):hover
     background-color: #232323;
 }
 
+#user-info
+{
+    margin: 30px 0px 0px 80px;
+    padding: 10px 0px 0px 30px;
+    width: 400px;
+    height: 560px;
+    background-color: #000;
+    opacity: 0.875;
+    text-align: left;
+}
+
+#user-info input
+{
+    background-color: #fff;
+    color: #232323;
+    width: 260px;
+    height: 18px;
+    margin-top: 30px;
+    border-radius: 4px;
+    filter: drop-shadow(0 0px 1.5px rgb(255, 255, 255));
+    padding: 6px 8px;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: "Trebuchet MS";
+    transition-duration: 300ms;
+    display: inline-block;
+}
+
+.edit-user
+{
+    width: 40px;
+    height: 32px;
+    line-height: 28px;
+    background-color: #232323;
+    color: #fff;
+    padding: 6px 8px 0px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    transition-duration: 100ms;
+    margin-left: 10px;
+}
+
+.edit-user:hover
+{
+    background-color: #464646;
+    cursor: pointer;
+}
+
+.edit-user:active
+{
+    background-color: #363636;
+    cursor: default;
+}
+
 #users-table
 {
     float: left;
     background-color: #000;
     opacity: 0.875;
     color: #fff;
-    width: 632px;
+    width: 700px;
     height: 400px;
     margin-top: 30px; 
     margin-left: 50px;

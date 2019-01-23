@@ -43,17 +43,19 @@
 		</nav>
 	</header>
 	<div id="container">
-	<?php
-
-		for($i = 0; $i < $_SESSION['warning_num_rows']; $i++)
-		{
-			echo '<div class="warning">';
-			echo '<p>'.$_SESSION["warning_".$i."_Title"]["Title"].'			'.$_SESSION["warning_".$i."_WarnPoints"]["WarnPoints"].'</p>';
-			echo '<div>'.$_SESSION["warning_".$i."_Message"]["Message"].'</div>';
-			echo '</div>';
-		}
-		
-	?>
+		<div id="user-info">
+		<?php
+			echo '<input type="text" value="'.$_SESSION["nickname"].'"></input><div class="edit-user" onclick="EditUserInfo(0)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["email"].'"></input><div class="edit-user" onclick="EditUserInfo(2)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["Birth"].'"></input><div class="edit-user" onclick="EditUserInfo(4)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["RegisterDate"].'"></input><div class="edit-user" onclick="EditUserInfo(6)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["Street"].' '.$_SESSION["HouseNumber"].'"></input><div class="edit-user" onclick="EditUserInfo(8)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["City"].' '.$_SESSION["ZipCode"].'"></input><div class="edit-user" onclick="EditUserInfo(10)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["Country"].'"></input><div class="edit-user" onclick="EditUserInfo(12)">Edit</div>';
+			echo '<input type="text" value="'.$_SESSION["Phone"].'"></input><div class="edit-user" onclick="EditUserInfo(14)">Edit</div>';
+		?>
+		</div>
+		<script src="js/EditingUser.js"></script>
 	</div>
 </body>
 </html>
