@@ -1,0 +1,406 @@
+body
+{
+    background-image: url("../images/wallpaper3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-family: "Trebuchet MS";
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity: 0.925; } }
+
+.fade-in 
+{
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+#header
+{
+    height: 70px;
+    background-color: #000;
+    opacity: 0.875;
+}
+
+#logo
+{
+    float: left;
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 13px;
+    margin-left: 70px;
+    filter: drop-shadow(0 0px 1.5px rgba(255,255,255, 1));
+    
+}
+
+#logo a
+{
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 300ms;
+}
+
+#logo a:hover
+{
+    filter: drop-shadow(0 0px 0.75px rgba(255,255,255, 1));
+}
+
+#logo-admin
+{
+    color: darkred;
+    font-size: 39px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 15px;
+    position: fixed;
+    top: 11px;
+    filter: drop-shadow(0 0px 1.5px darkred);
+    
+}
+
+#main-nav
+{
+    float: right;
+    margin-right: 70px;
+}
+
+#main-nav ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#main-nav li
+{
+    display: inline;
+}
+
+#main-nav li a
+{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: #505050;
+    text-decoration: none;
+    padding-top: 20px;
+    font-size: 25px;
+    transition-duration: 300ms;
+    text-shadow: 0 0 5px #000;
+}
+
+#main-nav li a:hover
+{
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+#container
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.fade-in.one
+{
+    -webkit-animation-duration: 1.35s;
+    -moz-animation-duration: 1.35s;
+    animation-duration: 1.35s;
+
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+.fade-in.two
+{
+    -webkit-animation-duration: 1.35s;
+    -moz-animation-duration: 1.35s;
+    animation-duration: 1.35s;
+
+    -webkit-animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+}
+
+.fade-in.hd
+{
+    -webkit-animation-duration: 1.35s;
+    -moz-animation-duration: 1.35s;
+    animation-duration: 1.35s;
+
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.fade-in.one-signup
+{
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    
+    -webkit-animation-duration: 1.35s;
+    -moz-animation-duration: 1.35s;
+    animation-duration: 1.35s;
+}
+
+.fade-in.hd-signup
+{
+    -webkit-animation-duration: 0.6s;
+    -moz-animation-durationy: 0.6s;
+    animation-duration: 0.6s;
+
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#container h1
+{
+    margin-top: 250px;
+    margin-bottom: 0px;
+    font-size: 80px;
+}
+
+#container h2
+{
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+#container a
+{
+    display: inline-block;
+    background-color: #d2474d;
+    color: #fff;
+    width: 200px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 16px;
+    text-shadow: 0 0 5px #fff;
+    transition-duration: 300ms;
+}
+
+#container a:hover
+{
+    background-color: #b0252b;
+}
+
+table 
+{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th 
+{
+    border: 1.5px solid #3a3a3a;
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even) 
+{
+    background-color: #303030;
+    transition-duration: 250ms;
+}
+
+tr:not(:first-child):hover
+{
+    background-color: #505050;
+}
+
+tr:nth-child(even):hover
+{
+    background-color: #505050;
+}
+
+#loginForm
+{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 5px;
+    filter: drop-shadow(0 0px 3px rgb(0, 0, 0));
+    padding-top: 65px;
+    font-size: 73px;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+#loginForm input:first-of-type
+{
+    margin-top: 70px;
+}
+
+#loginForm input[type="text"],#loginForm input[type="password"],#loginForm input[type="email"]
+{
+    background-color: #fff;
+    color: #232323;
+    width: 200px;
+    height: 26px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0px 1.5px rgb(255, 255, 255));
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: "Trebuchet MS";
+    transition-duration: 300ms;
+}
+
+#loginForm input:focus
+{
+    background-color: rgb(230, 250, 255);
+    color: rgb(1, 104, 145);
+    filter: drop-shadow(0 0px 1px rgb(255, 255, 255));
+    outline-color: transparent;
+    outline-style: none;
+}
+
+#loginForm input[type="submit"]
+{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 30px;
+    transition-duration: 400ms;
+}
+
+#loginForm input[type="submit"]:hover
+{
+    background-color: rgb(0, 67, 83);
+}
+
+#loginForm input[type="submit"]:active
+{
+    background-color: rgb(0, 45, 56);
+    position:relative;
+    top: 1px;
+    left: 1px;
+}
+
+#admin-nav
+{
+    float: left;
+    background-color: #000;
+    opacity: 0.875;
+    color: #fff;
+    width: 200px;
+    height: 100%;
+    padding: 25px 0px 25px 0px;
+    border-bottom-right-radius: 8px;
+}
+
+.admin-nav-element
+{
+    background-color: #000;
+    opacity: 0.875;
+    color: #fff;
+    width: 200px;
+    height: 10%;
+    display: block;
+    font-size: 18px;
+    padding: 5px 0px 5px 0px;
+    transition-duration: 200ms;
+}
+
+.admin-nav-element:hover
+{
+    background-color: #232323;
+}
+
+#users-table
+{
+    float: left;
+    background-color: #000;
+    opacity: 0.875;
+    color: #fff;
+    width: 632px;
+    height: 400px;
+    margin-top: 30px; 
+    margin-left: 50px;
+    padding: 25px 25px 25px 25px;
+    border-radius: 6px;
+}
+
+#row-border
+{
+    position: relative;
+    width: 626px;
+    height: 27px;
+    border: 2.5px solid #29552900;
+    z-index: 1;
+}
+
+#Command
+{
+    background-color: #fff;
+    color: #232323;
+    width: 540px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    left: 270px;
+    top: 490px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+    font-family: "Trebuchet MS";
+    transition-duration: 300ms;
+}
+
+#Send_Command
+{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 70px;
+    height: 40px;
+    margin: auto;
+    position: absolute;
+    left: 840px;
+    top: 490px;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+    transition-duration: 400ms;
+}
+
+.warning
+{
+    float: left;
+    background-color: #000;
+    opacity: 0.875;
+    color: #fff;
+    width: auto;
+    height: auto;
+    margin-top: 15px; 
+    margin-left: 50px;
+    padding: 25px 25px 25px 25px;
+    border-radius: 6px;
+}
