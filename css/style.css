@@ -339,7 +339,7 @@ tr:nth-child(even):hover
     margin: 30px 0px 0px 80px;
     padding: 10px 0px 0px 30px;
     width: 400px;
-    height: 560px;
+    height: 670px;
     background-color: #000;
     opacity: 0.875;
     text-align: left;
@@ -351,7 +351,6 @@ tr:nth-child(even):hover
     color: #232323;
     width: 260px;
     height: 18px;
-    margin-top: 30px;
     border-radius: 4px;
     filter: drop-shadow(0 0px 1.5px rgb(255, 255, 255));
     padding: 6px 8px;
@@ -360,6 +359,16 @@ tr:nth-child(even):hover
     font-family: "Trebuchet MS";
     transition-duration: 300ms;
     display: inline-block;
+}
+
+#user-info input[name="Street"], #user-info input[name="City"]
+{
+    width: 180px;
+}
+
+#user-info input[name="HouseNumber"], #user-info input[name="ZipCode"]
+{
+    width: 60px;
 }
 
 .edit-user
