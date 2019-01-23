@@ -124,7 +124,8 @@
 				
 				if ($validating_OK==true)
 				{
-					if ($con->query("INSERT INTO users VALUES (NULL, '$nick', '$name', '$lastname', '$pass_hash', '$email', 0, 0)"))
+					$date_now = date("Y-m-d H:i:s");
+					if ($con->query("INSERT INTO users VALUES (NULL, '$nick', '$name', '$lastname', '$pass_hash', '$email', NULL, '$date_now', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0)"))
 					{
 						$_SESSION['success_signup']=true;
 					
@@ -175,8 +176,8 @@
 	<div id="container">
 		<div id="loginForm" class="fade-in one-signup" style="margin-top: 50px; height: auto; width: 350px;">
 			Sign Up
-			<form name="loginForm" method="post">
-				<input type="text" name="nick" spellcheck="false" placeholder="Nickname" value="<?php
+			<form name="signUpForm" method="post" onsubmit="return validateForm(this)">
+				<input type="text" name="nick" spellcheck="false" placeholder="Nickname" required value="<?php
 				if (isset($_SESSION['fr_nickname']))
 				{
 					echo $_SESSION['fr_nickname'];
@@ -193,7 +194,7 @@
 				?>
 				</span>
 
-				<input type="text" name="name" spellcheck="false" placeholder="Name" value="<?php
+				<input type="text" name="name" spellcheck="false" placeholder="Name" required value="<?php
 				if (isset($_SESSION['fr_name']))
 				{
 					echo $_SESSION['fr_name'];
@@ -210,7 +211,7 @@
 				?>
 				</span>
 
-				<input type="text" name="lastname" spellcheck="false" placeholder="Lastname" value="<?php
+				<input type="text" name="lastname" spellcheck="false" placeholder="Lastname" required value="<?php
 				if (isset($_SESSION['fr_lastname']))
 				{
 					echo $_SESSION['fr_lastname'];
@@ -227,7 +228,7 @@
 				?>
 				</span>
 
-				<input type="email" name="email" spellcheck="false" placeholder="E-mail" value="<?php
+				<input type="email" name="email" spellcheck="false" placeholder="E-mail" required value="<?php
 				if (isset($_SESSION['fr_email']))
 				{
 					echo $_SESSION['fr_email'];
@@ -244,14 +245,14 @@
 				?>
 				</span>
 
-				<input type="password" name="pass" spellcheck="false" placeholder="Your password" value="<?php
+				<input type="password" name="pass" spellcheck="false" placeholder="Your password" required value="<?php
 				if (isset($_SESSION['fr_password']))
 				{
 					echo $_SESSION['fr_password'];
 					unset($_SESSION['fr_password']);
 				}
 				?>" />
-				<input type="password" name="repeat_pass" spellcheck="false" placeholder="Repeat password" value="<?php
+				<input type="password" name="repeat_pass" spellcheck="false" placeholder="Repeat password" required value="<?php
 				if (isset($_SESSION['fr_repeat_password']))
 				{
 					echo $_SESSION['fr_repeat_password'];
@@ -281,6 +282,7 @@
 				</div>
 				<input type="submit" name="signup" value="Sign Up"/>
 			</form>
+			<script src="js/validating.js"></script>
 			<?php
 					if(isset($_SESSION['signup_error']))	echo $_SESSION['signup_error']; unset($_SESSION['signup_error']);
 			?>

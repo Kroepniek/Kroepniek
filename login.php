@@ -37,11 +37,12 @@
 	<div id="container">
 		<div id="loginForm" class="fade-in one">
 			Login
-			<form name="loginForm" action="logining.php" method="post">
-				<input type="text" name="nick" spellcheck="false" placeholder="Nickname" autofocus />
-				<input type="password" name ="pass" spellcheck="false" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" />
+			<form name="loginForm" action="logining.php" method="post" onsubmit="return validateForm(this)">
+				<input type="text" name="nick" spellcheck="false" placeholder="Nickname" required autofocus />
+				<input type="password" name ="pass" spellcheck="false" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required />
 				<input type="submit" value="Login"/>
 			</form>
+			<script src="js/validating.js"></script>
 				<?php
 					if(isset($_SESSION['login_error']))	echo $_SESSION['login_error']; unset($_SESSION['login_error']);
 				?>

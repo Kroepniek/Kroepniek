@@ -43,8 +43,9 @@
 					$table_row[$i]['name'] = $record[$i][2];
 					$table_row[$i]['lastname'] = $record[$i][3];
 					$table_row[$i]['email'] = $record[$i][5];
-					$table_row[$i]['isAdmin'] = $record[$i][6];
-					$table_row[$i]['isBanned'] = $record[$i][7];
+					$table_row[$i]['RegisterDate'] = $record[$i][6];
+					$table_row[$i]['isAdmin'] = $record[$i][14];
+					$table_row[$i]['isBanned'] = $record[$i][15];
 				}
 						
 				unset($_SESSION['admin_error']);
@@ -201,6 +202,7 @@
 						echo '<th style="width: 15px; text-align: center">ID</th>';
 						echo '<th style="width: 220px; text-align: center">Nickname</th>';
 						echo '<th style="width: 220px; text-align: center">E-mail</th>';
+						echo '<th style="width: 220px; text-align: center">Register Date</th>';
 						echo '<th style="width: 50px; text-align: center">Admin</th>';
 						echo '<th style="width: 50px; text-align: center">Banned</th>';
 					echo '</tr>';
@@ -210,6 +212,7 @@
 							echo '<td style="text-align: center">'.$table_row[$j]['ID'].'</td>';
 							echo '<td style="text-align: left; padding-left: 8px; max-width: 220px; overflow: hidden; text-overflow: ellipsis">'.$table_row[$j]['nickname'].'</td>';
 							echo '<td style="text-align: left; padding-left: 8px; max-width: 220px; overflow: hidden; text-overflow: ellipsis">'.$table_row[$j]['email'].'</td>';
+							echo '<td style="text-align: left; padding-left: 8px; max-width: 220px; overflow: hidden; text-overflow: ellipsis">'.$table_row[$j]['RegisterDate'].'</td>';
 							echo '<td style="text-align: center;'.($table_row[$j]['isAdmin'] ? ' color: darkgreen"><b>True</b>' : ' color: darkred"><b>False</b>').'</td>';
 							echo '<td style="text-align: center;'.($table_row[$j]['isBanned'] ? ' color: darkgreen"><b>True</b>' : ' color: darkred"><b>False</b>').'</td>';
 						echo '</tr>';

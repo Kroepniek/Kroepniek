@@ -50,6 +50,14 @@
 							$_SESSION['ID'] = $record['ID'];
 							$_SESSION['nickname'] = $record['nickname'];
 							$_SESSION['email'] = $record['email'];
+							$_SESSION['Birth'] = $record['Birth'];
+							$_SESSION['RegisterDate'] = $record['RegisterDate'];
+							$_SESSION['Street'] = $record['Street'];
+							$_SESSION['HouseNumber'] = $record['HouseNumber'];
+							$_SESSION['City'] = $record['City'];
+							$_SESSION['ZipCode'] = $record['ZipCode'];
+							$_SESSION['Country'] = $record['Country'];
+							$_SESSION['Phone'] = $record['Phone'];
 							$_SESSION['isAdmin'] = $record['isAdmin'];
 
 							$ID = $record['ID'];
